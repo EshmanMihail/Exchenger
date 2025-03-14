@@ -1,0 +1,44 @@
+﻿@model List<CustomerRole>
+@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Роли пользователей</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <h1>Список ролей</h1>
+    <p><a asp-action="Create">Добавить новую роль</a></p>
+
+    <div>
+        <form method="post" action="/CustomerRole/FilterByName">
+            <label for="SearchName">Поиск по названию:</label>
+            <input type="text" name="SearchName" placeholder="Введите название" />
+            <button type="submit">Поиск</button>
+        </form>
+    </div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Название</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.RoleName</td>
+                    <td>
+                        <a asp-action="Update" asp-route-id="@item.RoleId">Изменить</a> |
+                        <a asp-action="Delete" asp-route-id="@item.RoleId">Удалить</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>

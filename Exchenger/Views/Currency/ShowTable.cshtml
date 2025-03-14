@@ -1,0 +1,60 @@
+﻿@model List<Currency>
+@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Валюты</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <h1>Список валют</h1>
+    <p><a asp-action="Create">Добавить новую валюту</a></p>
+
+    <div>
+        <form method="post" action="/Currency/FilterByNameAndAbbr">
+            <label for="SearchName">Поиск по названию:</label>
+            <input type="text" name="SearchName" placeholder="Введите название" />
+
+            <label for="SearchAbbr">Поиск по аббревиатуре:</label>
+            <input type="text" name="SearchAbbr" placeholder="Введите аббревиатуру" />
+
+            <button type="submit">Поиск</button>
+        </form>
+    </div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Название</th>
+                <th>Аббревиатура</th>
+                <th>Размер</th>
+                <th>Переодичность обновления</th>
+                <th>Курс на сегодня</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var item in Model){
+                <tr>
+                    <td>@item.CurName</td>
+                    <td>@item.CurAbbreviation</td>
+                    <td>@item.CurScale</td>
+                    <td>@item.CurPeriodicity</td>
+                    @if (item.CurOfficialRate == null) {
+                        <td>--</td>
+                    }
+                    else {
+                        <td>@item.CurOfficialRate</td>
+                    }
+                    <td>
+                        <a asp-action="Update" asp-route-id="@item.CurId">Изменить</a> |
+                        <a asp-action="Delete" asp-route-id="@item.CurId">Удалить</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>

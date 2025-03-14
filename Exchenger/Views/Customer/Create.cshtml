@@ -1,0 +1,54 @@
+﻿@model Exchenger.Models.Customer
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Добавление пользователя</title>
+	<meta charset="utf-8" />
+</head>
+
+<body>
+	<h1>Добавление нового пользователя</h1>
+	<div>
+		<form asp-action="Create">
+			<label>Имя</label>
+			<input asp-for="FirstName" />
+
+			<label>Фамилия</label>
+			<input asp-for="LastName" />
+
+			<label>Роль</label>
+			<select asp-for="RoleId" asp-items="ViewBag.RoleId"></select>
+
+			<label>Email</label>
+			<input asp-for="Email" />
+
+			<label>Номер телефона</label>
+			<input asp-for="PhoneNumber" />
+
+			<input type="submit" value="Сохранить" />
+		</form>
+	</div>
+
+	<div>
+		@if (ViewBag.Resalt == 1)
+		{
+			<p>Данные успешно добавлены!</p>
+		}
+		else if (ViewBag.Resalt == 0)
+		{
+			<p>Данные введены неверно!</p>
+			<p>@ViewBag.Customer.FirstName</p>
+			<p>@ViewBag.Customer.LastName</p>
+			<p>@ViewBag.Customer.RoleId</p>
+			<p>@ViewBag.Customer.Email</p>
+			<p>@ViewBag.Customer.PhoneNumber</p>
+			<p>@ViewBag.Customer.CreatedDate</p>
+		}
+	</div>
+	<div>
+		<a asp-action="ShowTable">Назад к списку</a>
+	</div>
+</body>
+
+</html>

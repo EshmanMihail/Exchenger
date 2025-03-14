@@ -1,0 +1,35 @@
+﻿@model Exchenger.Models.Customer
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Удаление пользователя</title>
+	<meta charset="utf-8" />
+</head>
+
+<body>
+	<h1>Удаление пользователя</h1>
+	<div>
+		<form asp-action="Delete">
+			<p><label>@Model.FirstName</label></p>
+			<p><label>@Model.LastName</label></p>
+			<p><label>@ViewBag.Rolee.RoleName</label></p>
+			<p><label>@Model.Email</label></p>
+			<p><label>@Model.PhoneNumber</label></p>
+			<p><label>@Model.CreatedDate</label></p>
+			<input type="submit" value="Удалить" />
+		</form>
+	</div>
+
+	<div>
+		@if (ViewBag.Resalt == 1)
+		{
+			<p>Данные успешно Удалены!</p>
+		}
+	</div>
+
+	<div>
+		<a asp-action="ShowTable">Назад к списку</a>
+	</div>
+</body>
+</html>

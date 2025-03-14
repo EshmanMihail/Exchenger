@@ -1,0 +1,52 @@
+﻿@model List<Operation>
+@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Операции</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <h1>Список операций</h1>
+    <div>
+        <form method="post" action="/Currency/FilterByNameAndAbbr">
+            <label for="SearchName">Поиск по названию:</label>
+            <input type="text" name="SearchName" placeholder="Введите название" />
+
+            <label for="SearchAbbr">Поиск по аббревиатуре:</label>
+            <input type="text" name="SearchAbbr" placeholder="Введите аббревиатуру" />
+
+            <button type="submit">Поиск</button>
+        </form>
+    </div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Пользователь</th>
+                <th>Внесённая валюта</th>
+                <th>Полученная валюта</th>
+                <th>Количество внесённой валюты</th>
+                <th>Количество полученной валюты</th>
+                <th>Дата операции</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Customer.FirstName @item.Customer.LastName</td>
+                    <td>@item.DepositedСurrency.CurName</td>
+                    <td>@item.ReceivedCurrency.CurName</td>
+                    <td>@item.AmountOfDeposited</td>
+                    <td>@item.AmountOfReceived</td>
+                    <td>@item.CreatedDate</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>

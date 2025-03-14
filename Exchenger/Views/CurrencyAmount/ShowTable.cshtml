@@ -1,0 +1,43 @@
+﻿@model List<CurrencyAmount>
+@{
+	Layout = "/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Количество валюты</title>
+		<meta charset="utf-8" />
+	</head>
+	<body>
+		<h1>Список валют</h1>
+
+	<div>
+		<form method="post" action="/CurrencyAmount/FilterByName">
+			<label for="SearchName">Поиск по названию:</label>
+			<input type="text" name="SearchName" placeholder="Введите название" />
+			<button type="submit">Поиск</button>
+		</form>
+	</div>
+
+	<table>
+		<thead>
+			<tr>
+				<th>Название</th>
+				<th>Количество</th>
+				<th>Тип вылюты</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach(var item in Model){
+				<tr>
+					<td>@item.Currency.CurName</td>
+					<td>@item.Amount</td>
+					<td>@item.Currency.CurAbbreviation</td>
+					<td><a asp-action="Fill" asp-route-id="@item.Id">Пополнить</a></td>
+				</tr>
+			}
+		</tbody>
+	</table>
+	</body>
+</html>

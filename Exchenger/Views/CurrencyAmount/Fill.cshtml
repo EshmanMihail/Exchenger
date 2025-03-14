@@ -1,0 +1,41 @@
+﻿@model Exchenger.Models.CurrencyAmount
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Пополнение валюты</title>
+	<meta charset="utf-8" />
+</head>
+
+<body>
+	<h1>Пополнение валюты</h1>
+    <div>
+        <form asp-action="Fill" method="post">
+            <input type="hidden" asp-for="Id" />
+            <div>
+                <label>Валюта:</label>
+                <span>@Model.Currency.CurName (@Model.Currency.CurAbbreviation)</span>
+            </div>
+            <div>
+                <label>Текущая сумма:</label>
+                <span>@Model.Amount</span>
+            </div>
+            <div>
+                <label>Пополнить на:</label>
+                <input type="number" name="addAmount" placeholder="Введите сумму для пополнения" required />
+            </div>
+            <div>
+                <input type="submit" value="Пополнить" />
+            </div>
+        </form>
+        @if (!string.IsNullOrEmpty(ViewBag.Result))
+        {
+            <p>@ViewBag.Result</p>
+            <p>Обновленная сумма: @Model.Amount</p>
+        }
+    </div>
+	<div>
+		<a asp-action="ShowTable">Назад к списку</a>
+	</div>
+</body>
+</html>

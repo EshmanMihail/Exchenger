@@ -1,0 +1,24 @@
+﻿@model Exchenger.Models.CustomerRole
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Удаление роли</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+	<h1>Удаление роли</h1>
+
+	<h3>Вы уверенны, что хотите удалить данные?</h3>
+
+	<div>
+		<p><label>@Model.RoleName</label></p>
+
+		<form asp-action="Delete">
+			<input type="hidden" asp-for="RoleId" />
+			<input type="submit" value="Удалить" /> |
+			<a asp-action="ShowTable">Назад к списку</a>
+		</form>
+	</div>
+</body>
+</html>

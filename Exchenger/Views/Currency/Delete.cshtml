@@ -1,0 +1,29 @@
+﻿@model Exchenger.Models.Currency
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Удаление валюты</title>
+		<meta charset="utf-8" />
+	</head>
+	<body>
+		<h1>Удаление валюты</h1>
+
+		<h3>Вы уверенны, что хотите удалить данные?</h3>
+
+		<div>
+			<p><label>@Model.CurId</label></p>
+			<p><label>@Model.CurName</label></p>
+			<p><label>@Model.CurAbbreviation</label></p>
+			<p><label>@Model.CurScale</label></p>
+			<p><label>@Model.CurPeriodicity</label></p>
+			<p><label>@Model.CurOfficialRate</label></p>
+
+			<form asp-action="Delete">
+				<input type="hidden" asp-for="CurId" />
+				<input type="submit" value="Delete" /> |
+				<a asp-action="ShowTable">Назад к списку</a>
+			</form>
+		</div>
+	</body>
+</html>

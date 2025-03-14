@@ -1,0 +1,49 @@
+﻿@model Exchenger.Models.Currency
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Изменение валюты</title>
+		<meta charset="utf-8"/>
+	</head>
+
+	<body>
+		<div>
+			<form asp-action="Update">
+                <input type="hidden" asp-for="CurId"/>
+
+				<label>Название</label>
+				<input asp-for="CurName" value="@Model.CurName" />
+
+				<label>Аббвериатура</label>
+				<input asp-for="CurAbbreviation" value="@Model.CurAbbreviation"/>
+
+				<label>Скейл</label>
+				<input asp-for="CurScale" value="@Model.CurScale"/>
+
+				<label>Переодичность</label>
+				<input asp-for="CurPeriodicity" value="@Model.CurPeriodicity"/>	
+
+				<label>Курс</label>
+				<input asp-for="CurOfficialRate" value="@Model.CurOfficialRate"/>
+
+				<input type="submit" value="Сохранить"/>
+			</form>
+		</div>
+
+		<div>
+			@if (ViewBag.Resalt == 1)
+			{
+				<p>Данные успешно добавлены!</p>
+			}
+			else if (ViewBag.Resalt == 0)
+			{
+				<p>Данные введены неверно!</p>
+			}
+		</div>
+
+		<div>
+			<a asp-action="ShowTable">Назад к списку</a>
+		</div>
+	</body>
+</html>

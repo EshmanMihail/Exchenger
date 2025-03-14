@@ -1,0 +1,87 @@
+﻿@model List<Currency>
+@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма с кнопками</title>
+</head>
+<body>
+    <div>
+        <form asp-action="Exchange" asp-controller="Home" method="post">
+            <div class="form-group">
+                <label for="currencyInput">Пополняемая валюта:</label>
+                <select name="InputCurrencyId" asp-items="ViewBag.Currencies"></select>
+                <input type="text" id="field1" name="InputAmount" placeholder="Введите сумму">
+            </div>
+            <div class="form-group">
+                <label for="currencyOutput">Получаемая валюта:</label>
+                <select name="OutputCurrencyId" asp-items="ViewBag.Currencies"></select>
+            </div>
+            <input type="submit" value="Обменять" class="btn btn-primary btn-block" />
+        </form>
+        <br></br>
+        <div class="button-group">
+            <a asp-controller="Currency" asp-action="ShowTable">Курсы валют</a>
+            <a asp-controller="CurrencyAmount" asp-action="ShowTable">Количества валют</a>
+            <a asp-controller="Customer" asp-action="ShowTable">Пользователи</a>
+            <a asp-controller="CustomerRole" asp-action="ShowTable">Роли</a>
+            @if (HttpContextAccessor.HttpContext.User.IsInRole("Admin"))
+            {
+                <a asp-controller="Operation" asp-action="ShowTable">Операции</a>
+            }
+        </div>
+        <div><a asp-controller="Account" asp-action="Login">Авторизация</a></div>
+
+        <div>
+            @{
+                var userId = HttpContextAccessor.HttpContext.Request.Cookies["UserId"];
+                if (userId != null) {
+                    int id = int.Parse(userId);
+                    List<Customer> customers = ViewBag.Customers;
+                    Customer currentUser = customers.FirstOrDefault(u => u.Id == id);
+                    <p>Добро пожаловать, @currentUser.FirstName @currentUser.LastName</p>
+                }
+            }
+        </div>
+
+        <h2>Официальные курсы белорусского рубля по отношению к иностранным валютам, устанавливаемые Национальным банком Республики Беларусь ежедневно, на @ViewBag.TodayDate</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Название</th>
+                    <th>Аббревиатура</th>
+                    <th>Количество единиц иностранной валюты</th>
+                    <th>Курс на сегодня</th>
+                    <th>Переодичность обновления</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.CurName</td>
+                        <td>@item.CurAbbreviation</td>
+                        <td>@item.CurScale</td>
+                        <td>@item.CurOfficialRate</td>
+                        @if (item.CurPeriodicity == 0)
+                        {
+                            <td>Ежедневно</td>
+                        }
+                        else
+                        {
+                            <td>Ежемесячно</td>
+                        }
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

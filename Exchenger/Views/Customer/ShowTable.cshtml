@@ -1,0 +1,60 @@
+﻿@model List<Customer>
+@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Пользователи</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <h1>Список пользователей</h1>
+    <p><a asp-action="Create">Добавить нового пользователя</a>
+    <div>
+        <form method="post" action="/Customer/Filter">
+            <label for="SearchName">Поиск по имени:</label>
+            <input type="text" name="SearchName" placeholder="Введите имя" />
+
+            <label for="SearchAbbr">Поиск по фамилии:</label>
+            <input type="text" name="SearchSecondName" placeholder="Введите фамилию" />
+
+            <label for="SearchAbbr">Поиск по номеру телефона:</label>
+            <input type="text" name="SearchPhone" placeholder="Введите номер телефона" />
+
+            <button type="submit">Поиск</button>
+        </form>
+    </div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Имя</th>
+                <th>Фамилия</th>
+                <th>Роль</th>
+                <th>Email</th>
+                <th>Номер телефона</th>
+                <th>Дата создания аккаунта</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.FirstName</td>
+                    <td>@item.LastName</td>
+                    <td>@item.Role.RoleName</td>
+                    <td>@item.Email</td>
+                    <td>@item.PhoneNumber</td>
+                    <td>@item.CreatedDate</td>
+                    <td>
+                        <a asp-action="Update" asp-route-id="@item.Id">Изменить</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id">Удалить</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>

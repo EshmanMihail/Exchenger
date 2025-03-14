@@ -1,0 +1,9 @@
+﻿@{
+    ViewBag.Title = "Результат обмена валют";
+}
+
+<h2>Результат обмена валют</h2>
+<p>Вы внесли: @ViewBag.InputAmount @ViewBag.InputCurrency</p>
+<p>Вы получили: @ViewBag.OutputAmount @ViewBag.OutputCurrency</p>
+<p>@ViewBag.AmountOfCurrencyNotEnough</p>
+<a asp-action="Index">Назад к списку</a>
