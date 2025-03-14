@@ -3,24 +3,16 @@
   "WorkspaceRootPath": "C:\\torrentdaun\\Obmennik\\Exchenger\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5719B617-846B-4ECC-870F-F7CC051DEE53}|Exchenger\\Exchenger.csproj|c:\\torrentdaun\\obmennik\\exchenger\\exchenger\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5719B617-846B-4ECC-870F-F7CC051DEE53}|Exchenger\\Exchenger.csproj|solutionrelative:exchenger\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{5719B617-846B-4ECC-870F-F7CC051DEE53}|Exchenger\\Exchenger.csproj|c:\\torrentdaun\\obmennik\\exchenger\\exchenger\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5719B617-846B-4ECC-870F-F7CC051DEE53}|Exchenger\\Exchenger.csproj|solutionrelative:exchenger\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5719B617-846B-4ECC-870F-F7CC051DEE53}|Exchenger\\Exchenger.csproj|c:\\torrentdaun\\obmennik\\exchenger\\exchenger\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{5719B617-846B-4ECC-870F-F7CC051DEE53}|Exchenger\\Exchenger.csproj|solutionrelative:exchenger\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5719B617-846B-4ECC-870F-F7CC051DEE53}|Exchenger\\Exchenger.csproj|c:\\torrentdaun\\obmennik\\exchenger\\exchenger\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{5719B617-846B-4ECC-870F-F7CC051DEE53}|Exchenger\\Exchenger.csproj|solutionrelative:exchenger\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5719B617-846B-4ECC-870F-F7CC051DEE53}|Exchenger\\Exchenger.csproj|c:\\torrentdaun\\obmennik\\exchenger\\exchenger\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5719B617-846B-4ECC-870F-F7CC051DEE53}|Exchenger\\Exchenger.csproj|solutionrelative:exchenger\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5719B617-846B-4ECC-870F-F7CC051DEE53}|Exchenger\\Exchenger.csproj|c:\\torrentdaun\\obmennik\\exchenger\\exchenger\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5719B617-846B-4ECC-870F-F7CC051DEE53}|Exchenger\\Exchenger.csproj|solutionrelative:exchenger\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -74,45 +66,23 @@
             },
             {
               "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "site.css",
-              "DocumentMoniker": "C:\\torrentdaun\\Obmennik\\Exchenger\\Exchenger\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "Exchenger\\wwwroot\\css\\site.css",
-              "ToolTip": "C:\\torrentdaun\\Obmennik\\Exchenger\\Exchenger\\wwwroot\\css\\site.css",
-              "RelativeToolTip": "Exchenger\\wwwroot\\css\\site.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-03-14T00:24:20.745Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\torrentdaun\\Obmennik\\Exchenger\\Exchenger\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Exchenger\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\torrentdaun\\Obmennik\\Exchenger\\Exchenger\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Exchenger\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-14T00:20:45.636Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\torrentdaun\\Obmennik\\Exchenger\\Exchenger\\Views\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "Exchenger\\Views\\Account\\Login.cshtml",
-              "ToolTip": "C:\\torrentdaun\\Obmennik\\Exchenger\\Exchenger\\Views\\Account\\Login.cshtml",
-              "RelativeToolTip": "Exchenger\\Views\\Account\\Login.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-14T00:11:31.392Z",
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\torrentdaun\\Obmennik\\Exchenger\\Exchenger\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Exchenger\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\torrentdaun\\Obmennik\\Exchenger\\Exchenger\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Exchenger\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwDEAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T02:12:02.5Z",
               "EditorCaption": ""
             },
             {
@@ -123,14 +93,14 @@
               "RelativeDocumentMoniker": "Exchenger\\Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\torrentdaun\\Obmennik\\Exchenger\\Exchenger\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "Exchenger\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACQAAABRAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACYAAABQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-03-13T00:57:57.71Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\torrentdaun\\Obmennik\\Exchenger\\Exchenger\\Program.cs",
               "RelativeDocumentMoniker": "Exchenger\\Program.cs",
@@ -138,8 +108,7 @@
               "RelativeToolTip": "Exchenger\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T00:57:39.951Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-13T00:57:39.951Z"
             }
           ]
         },

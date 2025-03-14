@@ -1,5 +1,6 @@
 using System.Diagnostics;
 using Exchenger.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore.Migrations.Operations;
@@ -30,7 +31,7 @@ namespace Exchenger.Controllers
             return View(currencies);
         }
 
-
+        [Authorize(Roles = "Admin, User")]
         [HttpPost]
         public IActionResult Exchange(int InputCurrencyId, int OutputCurrencyId, int InputAmount)
         {

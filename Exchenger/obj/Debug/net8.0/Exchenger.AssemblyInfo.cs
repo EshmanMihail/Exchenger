@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Exchenger")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2634dc51cb9706403ba4cfb5776c50572242f28f")]
 [assembly: System.Reflection.AssemblyProductAttribute("Exchenger")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Exchenger")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

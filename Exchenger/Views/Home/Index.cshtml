@@ -30,8 +30,14 @@
         <div class="button-group">
             <a asp-controller="Currency" asp-action="ShowTable">Курсы валют</a>
             <a asp-controller="CurrencyAmount" asp-action="ShowTable">Количества валют</a>
-            <a asp-controller="Customer" asp-action="ShowTable">Пользователи</a>
-            <a asp-controller="CustomerRole" asp-action="ShowTable">Роли</a>
+            @if (HttpContextAccessor.HttpContext.User.IsInRole("Admin"))
+            {
+                <a asp-controller="Customer" asp-action="ShowTable">Пользователи</a>
+            }
+            @if (HttpContextAccessor.HttpContext.User.IsInRole("Admin"))
+            {
+                <a asp-controller="CustomerRole" asp-action="ShowTable">Роли</a>
+            }
             @if (HttpContextAccessor.HttpContext.User.IsInRole("Admin"))
             {
                 <a asp-controller="Operation" asp-action="ShowTable">Операции</a>
